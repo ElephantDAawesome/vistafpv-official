@@ -117,11 +117,11 @@ nav ul {
   backdrop-filter: blur(8px);
   border-radius: 20px;
 }
-@media screen and (max-width: 360px) {
+/* @media screen and (max-width: 360px) {
   section p {
     color: red !important;
   }
-}
+} */
 
 .mainbody2 {
   background-color: #d3d3d3;
@@ -232,4 +232,16 @@ footer h3 {
 
 .media {
   font-size: 1.5rem;
+}
+
+#blog {
+  width: 800px;
+  max-height:500px;
+  font-size: 14px;
+  overflow: scroll;
+}
+
+video {
+  width: 100%;
+  height: 350px;
 }
