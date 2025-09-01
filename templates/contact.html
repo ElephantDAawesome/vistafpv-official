@@ -1,0 +1,49 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+      <section class="main3">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center">
+
+                <form class="col-lg-4 fs-3" action="email.php" method="post">
+                    <div>
+                        <h3 class="display-1">Want to Contact Us?</h3>
+                    </div>
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email address</label>
+                      <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="AshtonHall@gmail.com" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="subject" class="form-label">Subject</label>
+                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="message" class="form-label">Message</label>
+                      <input type="text" class="form-control" name="message" id="message" placeholder="Message" required>
+                    </div>
+                    <p class="fs-5">Our email is VistaFPV25@gmail.com!</p>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+
+                  <div class="col-lg-4">
+                    <div>
+                        <h3 class="display-1">Want to Support Us?</h3>
+                    </div>
+                    <div>
+                        <p class="fs-5">All the funding for our projects comes out of our own pockets. Every repair, every improvement we add, whether to our website or our gear - they all add up. Therefore, our mission is made possible by your support! Even donating the smallest amounts 
+                            can help improve our resources and tools tenfold - and bring even high-quality footage right to you in your bed!</p>
+                    </div>
+                    <a href="https://square.link/u/cjAYFVZL">
+                      <button type="submit" class="btn btn-primary">Donation</button>
+                    </a>
+                </div>
+            </div>
+            </div>
+
+      </section>
+{% endblock%}

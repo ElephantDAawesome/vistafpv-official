@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+      <header class="main4 vh-100 bg-body-tertiary">
+        <div class="container-sm rounded-4 text-light p-5 bg-dark" id="blog">
+          <div class="row text-left">
+            <div class="col-3 text-light rounded-3">
+              <span class="badge text-bg-success">New</span>
+              <h1 class="fw-bold">Welcome!</h1>
+              <h5 class="fw-normal">Week 1 - Monta Vista</h5>
+              <p class="fw-lighter">Welcome to our first blog! This is our ceromonious beginning to a long, and hopefully thriving journey going forwards! Today's blog was kept clean and simple - a twelve-second footage of the interior of Monta Vista, at Monta Vista High. Cheers! </p>
+            </div>
+            <div class="col align-self-center">
+              <video class="rounded-5" autoplay muted controls>
+                <source  src="../static/blog1.mp4" tyoe="video/mp4">
+                Your browser does not suppor the video tag.
+              </video>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col pt-5">
+                <img class="img-fluid rounded-3" id="blogmap" src="../static/blog1map.png" alt="map">
+              </div>
+            </div>
+
+
+        </div>
+      </header>
+{% endblock%}
