@@ -30,10 +30,15 @@
           </div> -->
           <div class="col">
             <h1 class="m-5">This Week's Blog:</h1>
-            <video class=" rounded-5" autoplay muted controls>
-              <source  src="../static/blog1.mp4" type="video/mp4">
+            {% for blog in blogs %}
+            <!-- <video class=" rounded-5" autoplay muted controls>
+              <source  src="{{blog.footage}}" type="video/mp4">
               Your browser does not suppor the video tag.
-            </video>
+            </video> -->
+              <iframe class="rounded-5" src="{{blog.footage}}" title="VistaFPV Blog 2" 
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen></iframe>
+            {% endfor %}
             <a href="footages.html">
               <button type="button" class="btn btn-success btn-lg mt-3">View Here</button>
             </a>

@@ -45,26 +45,32 @@ class InfoForm(FlaskForm):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    blogs = Blog.query.all()
+    title = "Home"
+    return render_template('index.html', blogs=blogs, title=title)
 
 
 @app.route('/footages')
 def footages():
+    title = "Footages"
     blogs = Blog.query.all()
-    return render_template("footages.html", blogs=blogs)
+    return render_template("footages.html", blogs=blogs, title=title)
 
 @app.route('/follow')
 def follow():
-    return render_template("follow.html")
+    title = "Follow"
+    return render_template("follow.html", title=title)
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
+    title = "Contact"
     from_addrs = "notabotz1776@gmail.com"
     to_addrs = "notabotz1776@gmail.com"
     password = "cjwdinrxvtywwiib"
     message = ''
     form = InfoForm()
     if form.validate_on_submit():
+
         session['name'] = form.name.data
         session['email'] = form.email.data
         session['subject'] = form.subject.data
@@ -81,10 +87,11 @@ def contact():
     # else:
     #     return redirect(url_for('error'))
 
-    return render_template("contact.html", form=form)
+    return render_template("contact.html", form=form, title=title)
 @app.route('/about')
 def about():
-    return render_template("about.html")
+    title = "About"
+    return render_template("about.html", title=title)
 
 @app.route('/thankyou')
 def thankyou():
